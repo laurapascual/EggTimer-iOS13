@@ -15,13 +15,14 @@ class ViewController: UIViewController {
         "Hard": 7
     ]
     @IBOutlet weak var titleLabel: UILabel!
-    
+
+    @IBOutlet weak var progressBar: UIProgressView!
     var secondsRemaining = 60
     
     var timer = Timer()
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        
+        progressBar.progress = 1.0
         timer.invalidate()
         
         let hardness = sender.currentTitle!
